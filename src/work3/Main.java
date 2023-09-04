@@ -1,5 +1,5 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
+package work3;
+
 import java.util.Scanner;
 
 public class Main {
