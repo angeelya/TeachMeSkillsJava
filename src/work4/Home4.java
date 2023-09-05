@@ -114,7 +114,7 @@ public class Home4 {
                 break;
             }
         }
-        System.out.println(increasingSequence ? "This is increasing sequence" : "This isn't increasing sequence");
+        System.out.println(increasingSequence ? "Array: "+Arrays.toString(mas)+"This is increasing sequence" : "Array: "+Arrays.toString(mas)+"This isn't increasing sequence");
     }
 
     public void arrayLikeNumber()//task*
