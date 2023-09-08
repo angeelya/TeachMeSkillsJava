@@ -20,7 +20,6 @@ public class Main {
         workWithMatrix();
         System.out.println("Practice 5");
         arrayFromSymbol();*/
-        arrayFromSymbol();
         Home5 home5 = new Home5();
         System.out.println("Task 1");
         home5.createDoubleArray();
