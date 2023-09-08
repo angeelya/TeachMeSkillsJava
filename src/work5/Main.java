@@ -20,7 +20,7 @@ public class Main {
         workWithMatrix();
         System.out.println("Practice 5");
         arrayFromSymbol();*/
-
+        arrayFromSymbol();
         Home5 home5 = new Home5();
         System.out.println("Task 1");
         home5.createDoubleArray();
@@ -31,11 +31,12 @@ public class Main {
     }
 
     private static void arrayFromSymbol() {
-        char[] mas = new char[8];
+        char[] mas = new char[11];
         mas[0] = ' ';
         mas[1] = 'r';
         mas[2] = ' ';
         mas[3] = '3';
+        mas[4]=' ';
         int countElements = 0;
         for (char c : mas) {
             if (c == ' ')
