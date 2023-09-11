@@ -12,8 +12,8 @@ public class MainHome {
         System.out.println("Actual information\n"+"Card1: "+card1.actualInformation()+"\n Card2: "
         +card2.actualInformation()+"\n Card3: " +card3.actualInformation());
        System.out.println("Task2");
-       Atm atm = new Atm(0,20,120);
-       atm.addCash(0,0,0);
+       Atm atm = new Atm(60,20,120);
+       atm.addCash(0,30,0);
        atm.outputCash(260);
 
     }
