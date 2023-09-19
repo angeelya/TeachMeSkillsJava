@@ -1,6 +1,8 @@
 package work8.home;
 
+import work8.home.task1.Dentist;
 import work8.home.task1.Patient;
+import work8.home.task1.Surgeon;
 import work8.home.task1.Therapist;
 import work8.home.task2.Apple;
 
@@ -11,7 +13,9 @@ public class MainHome {
         System.out.println("Task 1");
         Patient patient = new Patient(2);
         Therapist therapist = new Therapist();
-        therapist.prescribeTreatment(patient);
+        Surgeon surgeon = new Surgeon();
+        Dentist dentist = new Dentist();
+        therapist.prescribeTreatment(patient,surgeon,dentist);
         System.out.println("Task*");
         Apple apple = new Apple("Yellow");
         getColor(apple);
