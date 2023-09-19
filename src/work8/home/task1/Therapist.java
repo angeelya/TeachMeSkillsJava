@@ -1,8 +1,6 @@
 package work8.home.task1;
 
 public class Therapist extends Doctor {
-    private Doctor surgeon = new Surgeon();
-    private Doctor dentist = new Dentist();
 
     {
         System.out.println("Hello, You're seeing a therapist");
@@ -13,7 +11,8 @@ public class Therapist extends Doctor {
         return Therapist.class.getSimpleName() + " is treating you.";
     }
 
-    public void prescribeTreatment(Patient patient) {
+    public void prescribeTreatment(Patient patient,Surgeon
+                                    surgeon, Dentist dentist) {
         switch (patient.treatmentPlan) {
             case 1 -> {
                 System.out.println("Your doctor is " + surgeon.getClass().getSimpleName());
