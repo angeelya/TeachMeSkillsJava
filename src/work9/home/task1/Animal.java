@@ -6,8 +6,6 @@ public class Animal {
     }
 
     public void eat(String food) {
-        if(food=="meat")
-            System.out.println("Tiger like meat");
-        else System.out.println("Tiger doesn't like "+food);
+        System.out.println("Animal eat different food");
     }
 }
