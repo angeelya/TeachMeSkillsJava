@@ -3,7 +3,7 @@ package work9.home.task1;
 public class Rabbit extends Animal{
     @Override
     public String voice() {
-        return "";
+        return "ff";
     }
 
     @Override
