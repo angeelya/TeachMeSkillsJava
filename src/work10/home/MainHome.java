@@ -52,7 +52,7 @@ public class MainHome {
 
     private static void findPalindrome(String[] arrayWords) {
         StringBuilder word = new StringBuilder(arrayWords[enterNumberWord-1]);
-        if(arrayWords[enterNumberWord-1].equalsIgnoreCase(String.valueOf(word.reverse())))
+        if(arrayWords[enterNumberWord-1].equalsIgnoreCase(String.valueOf(word.reverse()))&&word.length()>1)
             System.out.println(arrayWords[enterNumberWord-1]+" is palindrome");
         else System.out.println(arrayWords[enterNumberWord-1]+" isn't palindrome");
     }
