@@ -51,20 +51,20 @@ public class MainHome {
     }
 
     private static void findPalindrome(String[] arrayWords) {
-        StringBuffer word = new StringBuffer(arrayWords[enterNumberWord-1]);
+        StringBuilder word = new StringBuilder(arrayWords[enterNumberWord-1]);
         if(arrayWords[enterNumberWord-1].equalsIgnoreCase(String.valueOf(word.reverse())))
             System.out.println(arrayWords[enterNumberWord-1]+" is palindrome");
         else System.out.println(arrayWords[enterNumberWord-1]+" isn't palindrome");
     }
 
     private static void duplicateSymbol(String str) {//task5
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder stringBuilder = new StringBuilder();
         char nowChar;
         for (int i = 0; i < str.length(); i++) {
             nowChar = str.charAt(i);
-            stringBuffer.append(nowChar).append(nowChar);
+            stringBuilder.append(nowChar).append(nowChar);
         }
-        System.out.println(stringBuffer);
+        System.out.println(stringBuilder);
     }
 
     private static void findWordFromDifferentSymbol() {//task4
