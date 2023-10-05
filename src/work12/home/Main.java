@@ -79,8 +79,15 @@ public class Main {
             while ((line = bufferedReader.readLine()) != null && !line.isEmpty()) {
                 lines.add(line);
             }
-            System.out.println("Max length: " + getMaxLengthOfWord(lines));
         } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        try (FileWriter fileWriter = new FileWriter("C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\maxLengthWord.txt")){
+           fileWriter.write(getMaxLengthOfWord(lines));
+            System.out.println("Max length: " + getMaxLengthOfWord(lines));
+        }
+        catch (IOException e)
+        {
             System.out.println(e.getMessage());
         }
     }
