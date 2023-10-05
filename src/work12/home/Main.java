@@ -22,7 +22,7 @@ public class Main {
         checkDocument();
     }
 
-    private static void checkDocument() {
+    private static void checkDocument() {//task*
         System.out.println("Enter path");
         String pathStr = in.nextLine(), line;
         Path path = Paths.get(pathStr);
@@ -40,7 +40,7 @@ public class Main {
         boolean notValid = false;
         String result = "", path;
 
-        if (line.startsWith("docnum")||line.startsWith("contract")) {
+        if (line.startsWith("docnum") || line.startsWith("contract")) {
             if (!line.matches("^[a-zA-Z\\d]+$")) {
                 notValid = true;
                 result = line + " It contains no only letters and numbers.";
@@ -53,26 +53,28 @@ public class Main {
                     notValid = true;
                 }
             }
-        }
-        else { if (notValid) {
-            result += " String don't start with docnum or contract";
         } else {
-            result = line + " String don't start with docnum or contract";
-            notValid = true;
-        }}
+            if (notValid) {
+                result += " String don't start with docnum or contract";
+            } else {
+                result = line + " String don't start with docnum or contract";
+                notValid = true;
+            }
+        }
         if (notValid)
             path = "C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\isNotValidDocument.txt";
-        else { result=line;
+        else {
+            result = line;
             path = "C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\isValidDocument.txt";
         }
-            try (FileWriter fileWriter = new FileWriter(path,true)) {
-            fileWriter.write(result+"\n");
+        try (FileWriter fileWriter = new FileWriter(path, true)) {
+            fileWriter.write(result + "\n");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    private static void getMaxWord() {
+    private static void getMaxWord() {//task1
         ArrayList<String> lines = new ArrayList<>();
         String line;
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\RomeoAndJuliet.txt"))) {
@@ -82,12 +84,9 @@ public class Main {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        try (FileWriter fileWriter = new FileWriter("C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\maxLengthWord.txt")){
-           fileWriter.write(getMaxLengthOfWord(lines));
-            System.out.println("Max length: " + getMaxLengthOfWord(lines));
-        }
-        catch (IOException e)
-        {
+        try (FileWriter fileWriter = new FileWriter("C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\maxLengthWord.txt")) {
+            fileWriter.write(getMaxLengthOfWord(lines));
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
