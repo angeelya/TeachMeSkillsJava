@@ -1,3 +1,5 @@
+package work2;
+
 public class Task5 {
     int q=21, w=8;
     public String divide()

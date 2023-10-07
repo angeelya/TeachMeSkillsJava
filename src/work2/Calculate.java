@@ -1,3 +1,5 @@
+package work2;
+
 import java.util.Scanner;
 
 public class Calculate {

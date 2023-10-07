@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-
 public class Main {
     static Scanner in = new Scanner(System.in);
+    static String chairs;
 
     public static void main(String[] args) {
 
-        System.out.println("Practice 1.1");
+      /*  System.out.println("Practice 1.1");
         joinString();
 
         System.out.println("Practice 1.2");
@@ -50,39 +50,73 @@ public class Main {
         System.out.println("Practice 4");
         findMinlengthWord();
         System.out.println("Practice 5");
-        findPalindrome();
+        findPalindrome();*/
+        System.out.println("Practice 6");
+        getGivenWordFromSymbolsOfOtherWords();
+    }
+
+    private static void getGivenWordFromSymbolsOfOtherWords() {
+   //     System.out.println("Enter words");
+       String [] words = {"cat","bt","hat","tree"};
+        // in.nextLine().split(" ");
+       // System.out.println("Enter word");
+        StringBuilder stringBuilder = new StringBuilder();
+        chairs = "attach";
+                //in.nextLine();
+        for (int i = 0; i < words.length; i++) {
+            if (compareWordsAndChairs(words[i])) {
+                stringBuilder.append(words[i]);
+            }
+        }
+        System.out.println(stringBuilder);
+
+    }
+
+    private static boolean compareWordsAndChairs(String word) {
+        StringBuilder builderWord = new StringBuilder(word), builderChairs = new StringBuilder(chairs);
+        for (int i = 0; i < builderWord.length(); i++) {
+            for (int j = 0; j < builderChairs.length(); j++) {
+                if (builderWord.charAt(i) == builderChairs.charAt(j)) {
+                    builderWord.deleteCharAt(i);
+                   if(i!=0) i--;
+                    builderChairs.deleteCharAt(j);
+                }
+
+            }
+        }
+        if (builderWord.isEmpty()) {
+            chairs = builderChairs.toString();
+            return true;
+        } else return false;
     }
 
     private static void findPalindrome() {
-        String [] str = in.nextLine().split(" ");
+        String[] str = in.nextLine().split(" ");
         StringBuilder stringBuilder = new StringBuilder("");
-        for(int i=0; i<str.length;i++)
-        {
-            if(isPalindrome(str[i])&&i!= str.length-1)
+        for (int i = 0; i < str.length; i++) {
+            if (isPalindrome(str[i]) && i != str.length - 1)
                 stringBuilder.append(str[i]).append(", ");
             else if (isPalindrome(str[i])) stringBuilder.append(str[i]);
 
 
         }
-        System.out.println("Palindromes: "+stringBuilder);
+        System.out.println("Palindromes: " + stringBuilder);
     }
 
-    private static boolean isPalindrome(String word ) {
+    private static boolean isPalindrome(String word) {
         StringBuilder wordReverse = new StringBuilder(word);
-        if(word.equalsIgnoreCase(String.valueOf(wordReverse.reverse()))&&word.length()>1)
+        if (word.equalsIgnoreCase(String.valueOf(wordReverse.reverse())) && word.length() > 1)
             return true;
         else return false;
     }
 
     private static void findMinlengthWord() {
-        String [] str = in.nextLine().split(" ");
-        int min = str[0].length(),indexMin=0;
-        for(int i=0; i<str.length;i++)
-        {
-            if(str[i].length()<min)
-            {
+        String[] str = in.nextLine().split(" ");
+        int min = str[0].length(), indexMin = 0;
+        for (int i = 0; i < str.length; i++) {
+            if (str[i].length() < min) {
                 min = str[i].length();
-                indexMin=i;
+                indexMin = i;
             }
         }
         System.out.println("Min word: " + str[indexMin]);
@@ -90,7 +124,7 @@ public class Main {
 
     private static void findWordCount() {
         System.out.println("Enter string");
-        String [] str = in.nextLine().split(" ");
+        String[] str = in.nextLine().split(" ");
         System.out.println("Count word: " + str.length);
     }
 

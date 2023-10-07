@@ -13,6 +13,7 @@ public class MainHome {
             System.out.println("5/k = whole part: " + 5 / k + " Remainder of division: " + 5 % k);
             for (; ; ) {
             }
+
         } catch (ArithmeticException e) {
             System.out.println("Division by zero");
             while (true) {

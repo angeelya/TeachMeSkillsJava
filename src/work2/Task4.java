@@ -1,3 +1,5 @@
+package work2;
+
 public class Task4 {
     double n=2.64;
     public int rounding()

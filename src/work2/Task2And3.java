@@ -1,3 +1,5 @@
+package work2;
+
 public class Task2And3 {
     int n = 26, n1 = 126;
     public int add()
