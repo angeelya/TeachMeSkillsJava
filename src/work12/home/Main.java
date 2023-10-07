@@ -12,7 +12,6 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
-    static String path;
     static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
