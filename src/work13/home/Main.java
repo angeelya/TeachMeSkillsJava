@@ -16,7 +16,7 @@ public class Main {
         workWithMyCollection();
     }
 
-    private static void workWithMyCollection() {
+    private static void workWithMyCollection() {//task*
         ArrayCollection<String> stringArrayCollection = new ArrayCollection<>();
         System.out.println("Collection length: "+stringArrayCollection.length());
         stringArrayCollection.add("hello");
@@ -44,7 +44,7 @@ public class Main {
         System.out.println(Arrays.toString(integerArrayCollection.toArray()));
     }
 
-    private static void workWithStudent() {
+    private static void workWithStudent() {//task3
         List<Student> students = new ArrayList<>();
         students.add(new Student("Ivan", "020601", 1));
         students.add(new Student("Vasilii", "050601", 1));
@@ -79,7 +79,7 @@ public class Main {
         }
     }
 
-    private static void workWithClassAnimal() {
+    private static void workWithClassAnimal() {//task2
         Animal animal = new Animal();
         animal.setAnimal("wolf");
         animal.setAnimal("tiger");
