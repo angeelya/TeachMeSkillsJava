@@ -36,7 +36,7 @@ public class Main {
         people.forEach(person->System.out.println(person));
         people.remove(person1);//pr 3.4
         people.remove(person2);
-        System.out.println(Arrays.toString(people.toArray()));
+        System.out.println(people);
         System.out.println("Do person 2 contain?"+people.contains(person2));//pr 3.5
     }
 
@@ -46,11 +46,11 @@ public class Main {
         countries.addFirst("France");
         countries.addLast("Germany");
         countries.addLast("Turkey");
-        System.out.println(Arrays.toString(countries.toArray()));
+        System.out.println(countries);
         countries.removeFirst();// pr 2.3
-        System.out.println(Arrays.toString(countries.toArray()));
+        System.out.println(countries);
         countries.removeLast();
-        System.out.println(Arrays.toString(countries.toArray()));
+        System.out.println(countries);
         System.out.println(countries.getFirst());//pr 2.4
         System.out.println(countries.getLast());
     }
@@ -60,13 +60,13 @@ public class Main {
         arrayCountries.add("Belarus");//pr 1.2
         arrayCountries.add("South Korea");
         arrayCountries.add("Russia");
-        System.out.println(Arrays.toString(arrayCountries.toArray()));
+        System.out.println(arrayCountries);
         arrayCountries.set(1, "USA");//pr 1.3
-        System.out.println(Arrays.toString(arrayCountries.toArray()));
+        System.out.println(arrayCountries);
         arrayCountries.remove(1);//pr 1.4
         System.out.println(Arrays.toString(arrayCountries.toArray()));
         arrayCountries.remove("Russia");//pr 1.5
-        System.out.println(Arrays.toString(arrayCountries.toArray()));
+        System.out.println(arrayCountries);
         System.out.println("Number of Belarus " + arrayCountries.indexOf("Belarus")); //pr 1.6
         System.out.println("Does Belarus contain? " + arrayCountries.contains("Belarus"));//pr 1.7
     }

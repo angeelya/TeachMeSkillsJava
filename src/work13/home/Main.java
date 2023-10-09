@@ -96,6 +96,6 @@ public class Main {
         for (int i = 0; i < numbersMas.length; i++) {
             numbers.add(numbersMas[i]);
         }
-        System.out.println(Arrays.toString(numbers.toArray()));
+        System.out.println(numbers);
     }
 }
