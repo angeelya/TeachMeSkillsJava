@@ -92,10 +92,16 @@ public class Main {
     private static void getRidOfDuplicateElements() {//task1
         System.out.println("Enter numbers through space");
         String[] numbersMas = in.nextLine().split(" ");
+        String result="";
         HashSet<String> numbers = new HashSet<>();
         for (int i = 0; i < numbersMas.length; i++) {
             numbers.add(numbersMas[i]);
         }
-        System.out.println(numbers);
+        Iterator iterator = numbers.iterator();
+        while(iterator.hasNext())
+        {
+            result+=iterator.next()+" ";
+        }
+        System.out.println(result.trim());
     }
 }
