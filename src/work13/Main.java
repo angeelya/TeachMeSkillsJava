@@ -29,7 +29,7 @@ public class Main {
 
     private static void workWithHashSet() {
         HashSet<Person> people = new HashSet<>();// pr 3.1-2
-        Person person1 = new Person(), person2 = new Person(), person3 = new Person();// pr 3.3
+        Person person1 = new Person("Ivan"), person2 = new Person("Alisa"), person3 = new Person("Irina");// pr 3.3
         people.add(person1);
         people.add(person2);
         people.add(person3);

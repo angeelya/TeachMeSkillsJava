@@ -24,24 +24,24 @@ public class Main {
         stringArrayCollection.add("java");
         stringArrayCollection.add("home");
         stringArrayCollection.add("love");
-        System.out.println(Arrays.toString(stringArrayCollection.toArray()));
+        System.out.println(stringArrayCollection);
         stringArrayCollection.add("queen");
         System.out.println("Collection length: "+stringArrayCollection.length());
-        System.out.println(Arrays.toString(stringArrayCollection.toArray()));
+        System.out.println(stringArrayCollection);
 
         stringArrayCollection.remove(0);
         stringArrayCollection.remove("world");
-        System.out.println(Arrays.toString(stringArrayCollection.toArray()));
+        System.out.println(stringArrayCollection);
         System.out.println(stringArrayCollection.get(0));
 
         System.out.println("Does java contain?"+stringArrayCollection.contains("java"));
 
         stringArrayCollection.clear();
-        System.out.println(Arrays.toString(stringArrayCollection.toArray()));
+        System.out.println(stringArrayCollection);
 
         ArrayCollection<Integer> integerArrayCollection = new ArrayCollection<>(12);
         integerArrayCollection.add(12);
-        System.out.println(Arrays.toString(integerArrayCollection.toArray()));
+        System.out.println(integerArrayCollection);
     }
 
     private static void workWithStudent() {//task3

@@ -1,5 +1,7 @@
 package work13.home;
 
+import java.util.Arrays;
+
 public class ArrayCollection<T> {
     private T[] array, extendedArray;
     private int actualSize = 0;
@@ -20,6 +22,11 @@ public class ArrayCollection<T> {
         }
         array[actualSize] = object;
         actualSize++;
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(array);
     }
 
     public Integer length() {
