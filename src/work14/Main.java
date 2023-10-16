@@ -7,6 +7,8 @@ import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
 import java.util.Scanner;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class Main {
     static Scanner in = new Scanner(System.in);
@@ -20,12 +22,35 @@ public class Main {
         workWithFunctionalInterface();
         System.out.println("Practice 4");
         workWithLambdaExpression();
+        System.out.println("Practice 5");
+        isPositiveOrNegativeNumberOrZero();
+        System.out.println("Practice 6");
+        checkStringStartOnJOrNAndEndOnA();
     }
 
+    private static void checkStringStartOnJOrNAndEndOnA() {
+        String sl="NORA";
+        Predicate<String> predicate = str->(str.startsWith("J") || str.startsWith("N"))&&str.endsWith("A");
+        System.out.println("Do line begin with J or N and end with A? "+predicate.test(sl));
+    }
+
+    private static void isPositiveOrNegativeNumberOrZero() {
+        Function<Integer, String> function = x -> {
+            if (x > 0) return "Positive number";
+            else if (x < 0) return "Negative number";
+            else return "Zero";
+        };
+       System.out.println(function.apply(-8));
+    }
+
+
     private static void workWithLambdaExpression() {
-        CompareAB compareAB = ((a,b)->{if(a<b) return a;
-        else if (a>b) return b; else return 0;});
-        System.out.println(compareAB.compareAB(5,9));
+        CompareAB compareAB = ((a, b) -> {
+            if (a < b) return a;
+            else if (a > b) return b;
+            else return 0;
+        });
+        System.out.println(compareAB.compareAB(5, 9));
     }
 
     private static void workWithFunctionalInterface() {
