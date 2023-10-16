@@ -18,7 +18,7 @@ public class Main {
 
     private static void serializeAndDeserializeStudent() {
         Student student = new Student("Julia", "Ivanova", 19);
-        String path = "C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\student.txt";
+        String path = new File("src/work12/home/student.txt").getAbsolutePath();
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(path))) {
             outputStream.writeObject(student);
         } catch (IOException e) {
@@ -33,7 +33,7 @@ public class Main {
     }
 
     private static void workWithFileTms2() {
-        String path = "C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\tms2.txt";
+        String path = new File("src/work12/tms2.txt").getAbsolutePath();
         try (FileWriter fileWriter = new FileWriter(path)) {
             fileWriter.write("Cognosce te ipsum");
         } catch (IOException e) {
@@ -48,7 +48,7 @@ public class Main {
     }
 
     private static void workWithFileTms() {
-        String path = "C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\tms.txt";
+        String path = new File("src/work12/tms.txt").getAbsolutePath();
         try (FileOutputStream fileOutputStream = new FileOutputStream(path)) {
             byte[] bytes = in.nextLine().getBytes();
             fileOutputStream.write(bytes, 0, bytes.length);

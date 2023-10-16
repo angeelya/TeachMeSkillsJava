@@ -1,3 +1,6 @@
 conract454647458f40404- String don't start with docnum or contract
 docnum42234455% It contains no only letters and numbers.
 gghghdocnum8888 String don't start with docnum or contract
+conract454647458f40404- String don't start with docnum or contract
+docnum42234455% It contains no only letters and numbers.
+gghghdocnum8888 String don't start with docnum or contract

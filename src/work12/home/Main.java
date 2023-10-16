@@ -1,15 +1,13 @@
 package work12.home;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
+
 
 public class Main {
     static Scanner in = new Scanner(System.in);
@@ -23,9 +21,9 @@ public class Main {
 
     private static void checkDocument() {//task*
         System.out.println("Enter path");
-        String pathStr = in.nextLine(), line;
-        Path path = Paths.get(pathStr);
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path.toFile()))) {
+        String pathStr = new File(in.nextLine()).getAbsolutePath(), line;
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(pathStr))) {
             while ((line = bufferedReader.readLine()) != null && !line.isEmpty()) {
                 isValid(line);
             }
@@ -61,10 +59,10 @@ public class Main {
             }
         }
         if (notValid)
-            path = "C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\isNotValidDocument.txt";
+            path = new File("src/work12/home/isNotValidDocument.txt").getAbsolutePath();
         else {
             result = line;
-            path = "C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\isValidDocument.txt";
+            path = new File("src/work12/home/isValidDocument.txt").getAbsolutePath();
         }
         try (FileWriter fileWriter = new FileWriter(path, true)) {
             fileWriter.write(result + "\n");
@@ -76,14 +74,14 @@ public class Main {
     private static void getMaxWord() {//task1
         ArrayList<String> lines = new ArrayList<>();
         String line;
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\RomeoAndJuliet.txt"))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("src/work12/home/RomeoAndJuliet.txt").getAbsolutePath()))) {
             while ((line = bufferedReader.readLine()) != null && !line.isEmpty()) {
                 lines.add(line);
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        try (FileWriter fileWriter = new FileWriter("C:\\Users\\Angelina\\OneDrive\\Рабочий стол\\tms\\work4\\src\\work12\\home\\maxLengthWord.txt")) {
+        try (FileWriter fileWriter = new FileWriter(new File("src/work12/home/maxLengthWord.txt").getAbsolutePath())) {
             fileWriter.write(getMaxLengthOfWord(lines));
         } catch (IOException e) {
             System.out.println(e.getMessage());
