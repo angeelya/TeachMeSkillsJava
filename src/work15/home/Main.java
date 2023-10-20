@@ -9,11 +9,7 @@ public class Main {
         System.out.println("Task*");
         reverseNameFromMap();
     }
-    //Задача *:
-    //Создать набор данных в формате id-name, сохраненный в Map. Необходимо отобрать из
-    //этого набора только те данные, id которых попадает в числовой диапазон 1/2/5/8/9/13.
-    //Среди отобранных значений отобрать только те, которые имеют нечетное количество
-    //букв в имени. После чего вернуть список List имен, записанных буквами задом наперед.
+
     private static void reverseNameFromMap() {//task*
         Map<Integer, String> listPeople = new HashMap<>();
         List result, diapason = Arrays.asList(1, 2, 5, 8, 9, 13);
@@ -36,12 +32,7 @@ public class Main {
                 .toList();
         System.out.println(result);
     }
-    //Задача 1:
-    //Создать коллекцию класса ArrayList наполнить ее элементами типа Integer. С помощью
-    // Stream'ов:
-    //  - Удалить дубликаты
-    //  - Оставить только четные элементы
-    //  - Вывести сумму оставшихся элементов в стриме
+
     private static void workWithArrayListFromStream() {//task1
         List<Integer> arr = new ArrayList<>(Arrays.asList(1, 2, 2, 3, 4, 5, 6, 7, 21, 34));
         System.out.println(arr);
