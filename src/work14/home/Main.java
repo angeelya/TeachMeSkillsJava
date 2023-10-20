@@ -27,8 +27,11 @@ public class Main {
         workWithSupplier();
     }
 
-    private static void workWithSupplier() {
-        Supplier<String> getReverseString= ()->{
+    // Задача 5:
+    // Используя Supplier написать метод, который будет возвращать введенную с консоли
+    // строку задом наперед.
+    private static void workWithSupplier() {//task5
+        Supplier<String> getReverseString = () -> {
             System.out.println("enter string");
             StringBuilder stringBuilder = new StringBuilder(in.nextLine());
             return stringBuilder.reverse().toString();
@@ -36,9 +39,14 @@ public class Main {
         System.out.println(getReverseString.get());
     }
 
+
+    //Задание 4:
+    // Используя Consumer реализовать лямбду, которая будет принимать в себя строку в
+    // формате “*сумма* BYN”(через пробел, вместо *сумма* вставить любое значение), а
+    // выводить сумму, переведенную сразу в доллары.
     private static void getDollarsUsingConsumer(String sum) {//task4
         Consumer<String> getDollars = strByn -> {
-            strByn=strByn.split(" ")[0];
+            strByn = strByn.split(" ")[0];
             try {
                 double dollars = Double.parseDouble(strByn) * (1 / 3.29);
                 System.out.println("BYN:" + strByn + " Dollars:" + dollars);
@@ -49,9 +57,13 @@ public class Main {
         getDollars.accept(sum);
     }
 
+    //Задача 3:
+    //Используя Function реализовать лямбду, которая будет принимать в себя строку в
+    //формате “*сумма* BYN”(через пробел, вместо *сумма* вставить любое значение), а
+    //возвращать сумму, переведенную сразу в доллары.
     private static void getDollarsUsingFunction(String sum) {//task3
         Function<String, String> getDollars = strByn -> {
-            strByn=strByn.split(" ")[0];
+            strByn = strByn.split(" ")[0];
             try {
                 double dollars = Double.parseDouble(strByn) * (1 / 3.29);
                 return String.valueOf(dollars);
@@ -64,7 +76,9 @@ public class Main {
 
     }
 
-
+    //Задача 2:
+    //Используя Predicate среди массива чисел вывести только те, которые являются
+    //положительными.
     private static void getPositiveNumbers() {//task2
         List<Integer> mas = Arrays.asList(-4, 5, 6, 7, 0, -8, 6, 5, 3);
         Predicate<Integer> predicate = x -> x > 0;
@@ -72,6 +86,10 @@ public class Main {
         System.out.println(mas);
     }
 
+
+    //Задание 1:
+    //Пользователь вводит в консоль дату своего рождения. Программа должна вернуть дату,
+    //когда пользователю исполнится 100 лет. Использовать Date/Time API.
     private static void getCenturyDate() {//task1
         try {
             System.out.println("Enter birthday's date, example 2023-07-21");
