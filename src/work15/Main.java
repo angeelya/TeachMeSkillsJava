@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import static java.util.Arrays.*;
 
@@ -16,17 +17,25 @@ public class Main {
         workWithStreamList();
         System.out.println("Practice 3");
         getDeveloper();
+        System.out.println("Practice 4");
+        workWithListStudent();
+    }
+
+    private static void workWithListStudent() {
+        List<Student> students = new ArrayList<>(Arrays.asList(new Student("Ivan", Arrays.asList("biology", "math")), new Student("Irina", Arrays.asList("chemistry", "physics"))));
+        System.out.println("{ "+students.stream().map(student ->
+                student.getName()+" : " + student.getDisciplines().stream().collect(Collectors.joining(", "))).collect(Collectors.joining("; "))+" }");
     }
 
     private static void getDeveloper() {
-        List<Developer> developers = new ArrayList<>(asList(new Developer("Ivan",1),new Developer("Noora",2),new Developer("Alex",3),new Developer("Anna",4),
-                new Developer("Uliana",5), new Developer("Ekaterina",6), new Developer("Andrew",11)));
-        developers.stream().filter(developer->developer.getName().startsWith("An")&&developer.getId()>10).forEach(developer -> System.out.println(developer));
+        List<Developer> developers = new ArrayList<>(asList(new Developer("Ivan", 1), new Developer("Noora", 2), new Developer("Alex", 3), new Developer("Anna", 4),
+                new Developer("Uliana", 5), new Developer("Ekaterina", 6), new Developer("Andrew", 11)));
+        developers.stream().filter(developer -> developer.getName().startsWith("An") && developer.getId() > 10).forEach(developer -> System.out.println(developer));
     }
 
     private static void workWithStreamList() {
-        List<String> strings = new ArrayList<>(asList("Home","Apple","Orange","Array"));
-        strings.stream().filter(str->str.startsWith("A")).forEach(str->System.out.println(str));
+        List<String> strings = new ArrayList<>(asList("Home", "Apple", "Orange", "Array"));
+        strings.stream().filter(str -> str.startsWith("A")).forEach(str -> System.out.println(str));
 
     }
 
