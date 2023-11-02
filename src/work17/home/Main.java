@@ -66,7 +66,7 @@ public class Main {
     private static void getAbbreviation() {//task1
         System.out.println("Enter line");
         String str = in.nextLine();
-        Pattern pattern = Pattern.compile("\\b[A-Z¿-ﬂ]{2,6}\\b", Pattern.UNICODE_CHARACTER_CLASS);
+        Pattern pattern = Pattern.compile("\\b[A-Z–ê-–Ø]{2,6}\\b", Pattern.UNICODE_CHARACTER_CLASS);
         Matcher matcher = pattern.matcher(str);
         while (matcher.find()) {
             System.out.println(matcher.group());
