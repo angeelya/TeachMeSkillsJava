@@ -21,8 +21,8 @@ public class Main {
     }
 
     private static void getName() {
-    String str ="Всем привет!! Меня зовут Билл Гейтс и я мечтаю учиться в TeachMeSkills!";
-        Pattern pattern = Pattern.compile("\\b[А-Я][а-я]* [А-Я][а-я]*\\b",Pattern.UNICODE_CHARACTER_CLASS);//Включает версию Юникода для предопределенных классов символов и классов символов POSIX.
+    String str ="Г‚Г±ГҐГ¬ ГЇГ°ГЁГўГҐГІ!! ГЊГҐГ­Гї Г§Г®ГўГіГІ ГЃГЁГ«Г« ГѓГҐГ©ГІГ± ГЁ Гї Г¬ГҐГ·ГІГ Гѕ ГіГ·ГЁГІГјГ±Гї Гў TeachMeSkills!";
+        Pattern pattern = Pattern.compile("\\b[Рђ-РЇ][Р°-СЏ]* [Рђ-РЇ][Р°-СЏ]*\\b",Pattern.UNICODE_CHARACTER_CLASS);//Г‚ГЄГ«ГѕГ·Г ГҐГІ ГўГҐГ°Г±ГЁГѕ ГћГ­ГЁГЄГ®Г¤Г  Г¤Г«Гї ГЇГ°ГҐГ¤Г®ГЇГ°ГҐГ¤ГҐГ«ГҐГ­Г­Г»Гµ ГЄГ«Г Г±Г±Г®Гў Г±ГЁГ¬ГўГ®Г«Г®Гў ГЁ ГЄГ«Г Г±Г±Г®Гў Г±ГЁГ¬ГўГ®Г«Г®Гў POSIX.
         Matcher matcher = pattern.matcher(str);
          if(matcher.find()) {
             System.out.println(matcher.group());
