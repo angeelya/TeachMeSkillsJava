@@ -9,16 +9,27 @@ public class Service {
     private Connection connection;
     private Statement statement;
     private String message;
-    private String DATABASE_NAME = "work20",LOGIN="root",PASS="mysql";
+    private String DB_URL="jdbc:mysql://localhost/",DATABASE_NAME = "work20",LOGIN="root",PASS="mysql";
 
+   public void createDatabase()
+   {  try{
+       Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+       connection=DriverManager.getConnection(DB_URL,LOGIN,PASS);
+       statement=connection.createStatement();
+       statement.executeUpdate("create database IF NOT EXISTS "+DATABASE_NAME);
+       statement.close();
+       connection.close();
+   } catch (SQLException | ClassNotFoundException | NoSuchMethodException | InstantiationException |
+            IllegalAccessException | InvocationTargetException e) {
+        e.printStackTrace();
+    }
+   }
     public void createTable() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/"+DATABASE_NAME, LOGIN, PASS);
+            connection = DriverManager.getConnection(DB_URL+DATABASE_NAME, LOGIN, PASS);
             statement = connection.createStatement();
             statement.executeUpdate("create table IF NOT EXISTS usersapp (id bigint primary key auto_increment ,login varchar(200),age int)");
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException |
-                 SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
