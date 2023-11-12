@@ -13,7 +13,10 @@ public class Main {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/work20", "root", "mysql");
             Statement statement = connection.createStatement();
-            ResultSet userRes = statement.executeQuery("select * from users where id=1");//practice 1
+            statement.executeUpdate("create table if not exists users (id bigint primary key auto_increment," +
+                    "name varchar(200),age int)");//create table
+            statement.executeUpdate("insert into users(name,age) values ('Alisa',21),('Uliana',22)");
+            ResultSet userRes = statement.executeQuery("select * from users");//practice 1
             User user = new User();
             if (userRes.next()) {
                 user.setId(userRes.getLong("id"));
