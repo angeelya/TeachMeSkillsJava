@@ -27,7 +27,7 @@ public class MyServlet extends HttpServlet {
         path = req.getServletPath();
         printWriter = resp.getWriter();
         String id, login;
-        if (path.equals("/get")) {
+        if (path.equals("/get")) {//  /get?id=
             resp.setContentType("text/html");
             id = req.getParameter("id");
             if (id != null && !id.isEmpty()) {
@@ -39,14 +39,18 @@ public class MyServlet extends HttpServlet {
                     printWriter.write("<p> Age: " + usersApp.getAge() + "</p>");
                 } else printWriter.write("Table row is empty");
             } else printWriter.write("No id in the address");
-        } else if (path.equals("/change-login")) {
+        }
+
+        else if (path.equals("/change-login")) {//  /change-login?id=&login=
             id = req.getParameter("id");
             login = req.getParameter("login");
             System.out.println(login + id);
             if (id != null && !id.isEmpty() && login != null && !login.isEmpty()) {
                 printWriter.write(service.updateLogin(id, login));
             } else printWriter.write("Data is empty");
-        } else if (path.equals("/delete")) {
+        }
+
+        else if (path.equals("/delete")) { //  /delete?id=
             id = req.getParameter("id");
             if (id != null && !id.isEmpty()) {
                 printWriter.write(service.deleteById(id));
@@ -61,7 +65,7 @@ public class MyServlet extends HttpServlet {
         System.out.println(path);
         UsersApp usersApp = new UsersApp();
         printWriter = resp.getWriter();
-        if (path.equals("/create")) {
+        if (path.equals("/create")) { //  / create
             usersApp.setLogin(req.getParameter("login"));
             usersApp.setAge(Integer.valueOf(req.getParameter("age")));
             printWriter.write(service.putUser(usersApp));
