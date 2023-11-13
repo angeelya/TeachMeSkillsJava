@@ -9,6 +9,21 @@ public class Main {
         System.out.println("Task 1-2");
         setArray();
         System.out.println("Task*");
+        shopping();
+    }
+
+    private static void shopping() {//task*
+        Shop shop = new Shop();
+        Producer producer = new Producer(shop);
+        Buyer buyer = new Buyer(shop);
+        Thread producerThread = new Thread(producer), buyerThread= new Thread(buyer);
+        producerThread.start(); buyerThread.start();
+        try {
+            producerThread.join();
+            buyerThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 
