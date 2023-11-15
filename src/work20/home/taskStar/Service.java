@@ -9,7 +9,7 @@ public class Service {
     private Connection connection;
     private Statement statement;
     private String message;
-    private String DB_URL="jdbc:mysql://localhost/",DATABASE_NAME = "work20",LOGIN="root",PASS="mysql";
+    private final String DB_URL="jdbc:mysql://localhost/",DATABASE_NAME = "work20",LOGIN="root",PASS="mysql";
 
    public void createDatabase()
    {  try{
