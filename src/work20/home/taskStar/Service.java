@@ -9,11 +9,12 @@ public class Service {
     private Connection connection;
     private Statement statement;
     private String message;
-    private final String DB_URL="jdbc:mysql://localhost/",DATABASE_NAME = "work20",LOGIN="root",PASS="mysql";
+
+    private final String DRIVER="com.mysql.cj.jdbc.Driver",DB_URL="jdbc:mysql://localhost/",DATABASE_NAME = "work20",LOGIN="root",PASS="mysql";
 
    public void createDatabase()
    {  try{
-       Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
+       Class.forName(DRIVER).getDeclaredConstructor().newInstance();
        connection=DriverManager.getConnection(DB_URL,LOGIN,PASS);
        statement=connection.createStatement();
        statement.executeUpdate("create database IF NOT EXISTS "+DATABASE_NAME);
