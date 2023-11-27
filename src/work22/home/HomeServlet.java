@@ -18,10 +18,6 @@ public class HomeServlet extends HttpServlet {
     private LocalTime localTime;
     private String path;
 
-    @Override
-    public void init() throws ServletException {
-        super.init();
-    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
