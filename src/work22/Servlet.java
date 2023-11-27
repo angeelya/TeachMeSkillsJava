@@ -45,7 +45,6 @@ public class Servlet extends HttpServlet {
         printWriter = resp.getWriter();
         if (path.equals("/helloPost")) {
             printHello(printWriter,req);
-
         }
     }
 
