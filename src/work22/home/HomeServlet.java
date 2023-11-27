@@ -27,7 +27,7 @@ public class HomeServlet extends HttpServlet {
         if (path.equals("/minsk"))
             localTime = LocalTime.now(ZoneId.of("Europe/Minsk"));
         if (path.equals("/washington"))
-            localTime = LocalTime.now(ZoneId.of("America/Washington"));
+            localTime = LocalTime.now(ZoneId.of("America/New_York"));
         if (path.equals("/beijing"))
             localTime = LocalTime.now(ZoneId.of("Asia/Shanghai"));
         printWriter.write(path + ": " + localTime.toString());
