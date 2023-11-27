@@ -42,8 +42,8 @@ public class HomeServlet extends HttpServlet {
             try {
                 Integer age = Integer.valueOf(req.getParameter("age"));
                 if (age < 18)
-                    printWriter.write("Minor " + age);
-                else printWriter.write("Adult " + age);
+                    printWriter.write("It isn't adult " + age);
+                else printWriter.write("It's adult " + age);
             } catch (NumberFormatException e) {
                 printWriter.write("It isn't age");
             }
