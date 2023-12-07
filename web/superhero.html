@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superhero</title>
+</head>
+<style>
+    body{
+        background-image: url("city.jpg");
+    }
+    .image{
+        width: 300px;
+        height: 240px;
+    }
+    .text{
+        font-style: italic;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 90px;
+        color: transparent;
+        height: 100vh;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(90deg, darkred, red,white);
+        text-shadow:
+                1px 0 1px #000,
+                0 1px 1px #000,
+                -1px 0 1px #000,
+                0 -1px 1px #000;
+    }
+</style>
+<body>
+<div class="text">
+    SPIDER MAN</div>
+<img class="image" src="spider.png">
+</body>
+</html>
