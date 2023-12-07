@@ -17,5 +17,8 @@ public class Servlet extends HttpServlet {
         resp.sendRedirect("/verse_work24.html");
         else if(path.equals("/homeTask1"))
             resp.sendRedirect("/tms_work24.html");
+        else if (path.equals("/homeTaskStar")) {
+            resp.sendRedirect("superhero.html");
+        }
     }
 }

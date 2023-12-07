@@ -5,35 +5,44 @@
     <title>Superhero</title>
 </head>
 <style>
-    body{
+    body {
         background-image: url("city.jpg");
     }
-    .image{
-        width: 300px;
-        height: 240px;
+
+    .image {
+        display: flex;
+        justify-content: left;
+        width: 400px;
+        height: 340px;
     }
-    .text{
+
+    .text {
         font-style: italic;
         font-weight: bold;
-        font-family: Arial, sans-serif;
+        font-family: "Marlett";
         display: flex;
         justify-content: center;
-        align-items: center;
-        font-size: 90px;
+        font-size: 100px;
         color: transparent;
-        height: 100vh;
         -webkit-background-clip: text;
-        background-image: linear-gradient(90deg, darkred, red,white);
-        text-shadow:
-                1px 0 1px #000,
-                0 1px 1px #000,
-                -1px 0 1px #000,
-                0 -1px 1px #000;
+        background-image: linear-gradient(90deg, darkred, red, white);
+        -webkit-text-stroke: 3px #000000;
+    }
+
+    .more {
+        font-size: 40px;
+        color: white;
     }
 </style>
 <body>
+<div class="image">
+    <img src="spider.png">
+    <a class="more"
+       href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA-%D0%BF%D0%B0%D1%83%D0%BA">Узнать
+        больше</a>
+</div>
 <div class="text">
-    SPIDER MAN</div>
-<img class="image" src="spider.png">
+    SPIDER-MAN
+</div>
 </body>
 </html>
