@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+}
+
+.batman_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    font-family: Impact;
+    font-size: 120px;
+    color: #D2A41C;
+}
+.logo_img{
+    width: 364px;
+    height: 364px;
+    margin-left: 60px;
+}
+.text_film{
+    text-align-all: center;
+    font-size: 120px;
+    font-family: Impact;
+    color: white;
+}
+.batman_nav_title {
+    font-size: 25px;
+    color: white;
+    font-family: "Comic Sans MS";
+}
+
+.text {
+    font-size: 13px;
+    color: white;
+}
+
+.phrase {
+    font-family: Impact;
+    font-size: 18px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 50px;
+    color: white;
+}
