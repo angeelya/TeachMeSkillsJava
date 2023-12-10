@@ -15,8 +15,8 @@ public class Servlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         path= req.getServletPath();
         if(path.equals("/bootstrapPractice"))
-            resp.sendRedirect("/bootstrap_work25.html");
+            resp.sendRedirect("/work25/bootstrap_work25.html");
         else if(path.equals("/superheroHome"))
-            resp.sendRedirect("/superhero_bootstrap_work25.html");
+            resp.sendRedirect("/work25/superhero_bootstrap_work25.html");
     }
 }
