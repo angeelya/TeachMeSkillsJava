@@ -93,5 +93,6 @@
     <orderEntry type="library" name="jar_files" level="project" />
     <orderEntry type="library" name="mysql.connector.j" level="project" />
     <orderEntry type="library" name="jakarta.servlet.api" level="project" />
+    <orderEntry type="library" name="mysql-connector-java" level="project" />
   </component>
 </module>
