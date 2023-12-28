@@ -7,6 +7,8 @@ import work30.home.factory.Furniture;
 import work30.home.factory.SofaFactory;
 import work30.home.factory.TableFactory;
 import work30.home.prototype.Orange;
+import work30.home.proxy.Image;
+import work30.home.proxy.ProxyImage;
 import work30.home.singleton.Dog;
 import java.math.BigDecimal;
 
@@ -23,7 +25,14 @@ public class Main {
         getOrder();
         System.out.println("Task *");
         prototype();
+        System.out.println("Task **");
+        proxy();
+    }
 
+    private static void proxy() {
+        Image image = new ProxyImage("image.jpg");
+        image.display();//without proxy
+        image.display();//with proxy
     }
 
     private static void prototype() {
