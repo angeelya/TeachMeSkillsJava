@@ -38,5 +38,16 @@ public class Order {
         {
             return order;
         }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "numberOrder='" + numberOrder + '\'' +
+                ", address='" + address + '\'' +
+                ", nameCustomer='" + nameCustomer + '\'' +
+                ", cost=" + cost +
+                '}';
     }
 }

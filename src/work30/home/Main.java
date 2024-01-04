@@ -47,6 +47,7 @@ public class Main {
     private static void getOrder() {
         Order order = new Order.OrderBuilder().nameCustomer("Karina").address("Lenina Street").
                 numberOrder("1234rT").cost(new BigDecimal(456.7)).build();
+        System.out.println(order);
     }
 
     private static void furnitureFactory() {
