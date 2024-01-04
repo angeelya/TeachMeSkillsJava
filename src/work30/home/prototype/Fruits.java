@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public abstract class Fruits {
+public abstract class Fruits implements Cloneable{
     private String color;
     private String taste;
 
