@@ -1,6 +1,10 @@
 package work31.home;
 
 import work31.home.adapter.*;
+import work31.home.chain_of_responsibility.Handler;
+import work31.home.chain_of_responsibility.HandlerA;
+import work31.home.chain_of_responsibility.HandlerB;
+import work31.home.chain_of_responsibility.Request;
 import work31.home.decorator.DecoratorPhone;
 import work31.home.decorator.HomePhone;
 import work31.home.decorator.MobilePhone;
@@ -27,6 +31,18 @@ public class Main {
         gamesStrategy();
         System.out.println("Task **");
         observerFlower();
+        System.out.println("Task ***");
+        chainOFResponsibility();
+    }
+
+    private static void chainOFResponsibility() {
+        Handler handlerA = new HandlerA(), handlerB = new HandlerB();
+        handlerA.setNext(handlerB);
+        Request req1= new Request("request1"), req2= new Request("request2");
+        handlerA.handleRequest(req1);
+        handlerA.handleRequest(req2);
+        handlerB.handleRequest(req1);
+        handlerB.handleRequest(req2);
     }
 
     private static void observerFlower() {
