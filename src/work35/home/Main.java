@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Task 2");
         getFirstAndLastSymbolWords(List.of(new String[]{"moon", "love", "cy", "bi", "man"}));
         System.out.println("Task*");
-        if (checkBrackets("([}])")) System.out.println("line is balanced");
+        if (checkBrackets("{{[]()}}}}")) System.out.println("line is balanced");
         else System.out.println("line isn't balanced");
     }
 
