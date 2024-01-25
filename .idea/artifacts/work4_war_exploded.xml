@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="work4:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/work4_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="work4" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.22/lombok-1.18.22.jar" />
+          <element id="library" level="project" name="jar_files" />
+          <element id="library" level="project" name="mysql.connector.j" />
+          <element id="library" level="project" name="mysql-connector-java" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:6.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:6.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:6.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:6.0.9" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:6.0.9" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:6.0.9" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:6.0.9" />
+          <element id="library" level="project" name="Maven: io.micrometer:micrometer-observation:1.10.7" />
+          <element id="library" level="project" name="Maven: io.micrometer:micrometer-commons:1.10.7" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:6.0.9" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="work4/web/Web3" />
+      <element id="javaee-facet-resources" facet="work4/web/Web4" />
+      <element id="javaee-facet-resources" facet="work4/web/Web2" />
+      <element id="javaee-facet-resources" facet="work4/web/Web" />
+      <element id="javaee-facet-resources" facet="work4/web/Web7" />
+      <element id="javaee-facet-resources" facet="work4/web/Web5" />
+      <element id="javaee-facet-resources" facet="work4/web/Web6" />
+    </root>
+  </artifact>
+</component>
