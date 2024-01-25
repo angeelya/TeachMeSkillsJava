@@ -1,6 +1,5 @@
 package work19;
 
-import work8.home.task1.Therapist;
 
 public class Main {
     public static void main(String[] args) {
