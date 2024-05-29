@@ -30,7 +30,7 @@ public class ArrayCollection<T> {
     }
 
     public Integer length() {
-        return array.length;
+        return actualSize;
     }
 
     public void remove(int index) {
